@@ -8,6 +8,7 @@ import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import { PreloaderComponent } from 'src/app/components/preloader/preloader.component';
 import { RightSidebarComponent } from 'src/app/components/right-sidebar/right-sidebar.component';
 import { AdminlteRoutingModule } from './adminlte-routing.module';
+import { MenuItemComponent } from 'src/app/components/menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AdminlteRoutingModule } from './adminlte-routing.module';
     ContentHeaderComponent,
     FooterComponent,
     RightSidebarComponent,
+    MenuItemComponent,
   ],
   imports: [CommonModule, AdminlteRoutingModule],
 })
