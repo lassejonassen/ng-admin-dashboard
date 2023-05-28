@@ -3,30 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PreloaderComponent } from './components/preloader/preloader.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { MainSidebarComponent } from './components/main-sidebar/main-sidebar.component';
-import { ContentHeaderComponent } from './components/content-header/content-header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { RightSidebarComponent } from './components/right-sidebar/right-sidebar.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ServerErrorComponent } from './pages/server-error/server-error.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PreloaderComponent,
-    NavbarComponent,
-    MainSidebarComponent,
-    ContentHeaderComponent,
-    FooterComponent,
-    RightSidebarComponent,
-    DashboardComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, ServerErrorComponent, NotFoundComponent, LoginComponent, ForgotPasswordComponent, RegisterComponent, ResetPasswordComponent],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
