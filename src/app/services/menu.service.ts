@@ -21,9 +21,21 @@ export class MenuService {
 
   private changeMainSidebarMenu(): void {
     const model: MenuItem[] = [
-      { label: 'Dashboard', icon: '', href: '/', visible: true },
+      {
+        label: 'Dashboard',
+        icon: '',
+        href: '/',
+        visible: true,
+        items: [
+          {
+            label: 'Test',
+            icon: '',
+            href: '/',
+            visible: true,
+          },
+        ],
+      },
     ];
-
     this._mainSidebarMenuModel.next(model);
   }
 

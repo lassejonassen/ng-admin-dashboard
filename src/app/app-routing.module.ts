@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+// Error pages
 import { ServerErrorComponent } from './pages/server-error/server-error.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+
+// Authentication pages
 import { LoginComponent } from './pages/login/login.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -15,14 +19,14 @@ const routes: Routes = [
         (m) => m.AdminlteModule
       ),
   },
-  {
-    path: '500',
-    component: ServerErrorComponent,
-  },
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'reset-password', component: ResetPasswordComponent },
+  {
+    path: '500',
+    component: ServerErrorComponent,
+  },
   { path: '404', component: NotFoundComponent },
   { path: '**', component: NotFoundComponent },
 ];

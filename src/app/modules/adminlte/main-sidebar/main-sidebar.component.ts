@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subject, combineLatest, delay, takeUntil } from 'rxjs';
+import { Subject, combineLatest, takeUntil, delay } from 'rxjs';
 import { MenuItem } from 'src/app/models/menu-item.model';
 import { MenuService } from 'src/app/services/menu.service';
 
@@ -17,13 +17,11 @@ export class MainSidebarComponent implements OnInit, OnDestroy {
   constructor(public menuService: MenuService) {}
 
   ngOnInit(): void {
-    combineLatest([this.menuService.mainSidebarMenuModel$])
-      .pipe(takeUntil(this.unsubscribeAll), delay(0))
-      .subscribe(([menuModel]) => {
+    combineLatest([this.menuService.mainSidebarMenuModel$]).subscribe(
+      ([menuModel]) => {
         this.model = menuModel;
-      });
-
-    console.log(this.model);
+      }
+    );
   }
 
   ngOnDestroy(): void {

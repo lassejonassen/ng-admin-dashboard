@@ -7,68 +7,20 @@ import {
 } from '@angular/animations';
 import {
   Component,
+  OnInit,
+  OnDestroy,
   HostBinding,
   Input,
-  OnDestroy,
-  OnInit,
 } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { Subscription, filter } from 'rxjs';
-import { MainComponent } from 'src/app/modules/main/main.component';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { MenuService } from 'src/app/services/menu.service';
+import { MainComponent } from '../../main/main.component';
 
 @Component({
   selector: '[app-menu-item]',
   templateUrl: './menu-item.component.html',
   styleUrls: ['./menu-item.component.scss'],
-  animations: [
-    trigger('children', [
-      state(
-        'void',
-        style({
-          height: '0px',
-        })
-      ),
-      state(
-        'hiddenAnimated',
-        style({
-          height: '0px',
-        })
-      ),
-      state(
-        'visibleAnimated',
-        style({
-          height: '*',
-        })
-      ),
-      state(
-        'visible',
-        style({
-          height: '*',
-          'z-index': 100,
-        })
-      ),
-      state(
-        'hidden',
-        style({
-          height: '0px',
-          'z-index': '*',
-        })
-      ),
-      transition(
-        'visibleAnimated => hiddenAnimated',
-        animate('400ms cubic-bezier(0.86, 0, 0.07, 1)')
-      ),
-      transition(
-        'hiddenAnimated => visibleAnimated',
-        animate('400ms cubic-bezier(0.86, 0, 0.07, 1)')
-      ),
-      transition(
-        'void => visibleAnimated, visibleAnimated => void',
-        animate('400ms cubic-bezier(0.86, 0, 0.07, 1)')
-      ),
-    ]),
-  ],
 })
 export class MenuItemComponent implements OnInit, OnDestroy {
   @HostBinding('class.active-menuitem') 'active' = false;
