@@ -29,7 +29,14 @@
         role="menu"
         data-accordion="false"
       >
-        <li class="nav-header">MULTI LEVEL EXAMPLE</li>
+        <li
+          app-menu-item
+          *ngFor="let item of model; let i = index"
+          [item]="item"
+          [index]="i"
+          [root]="true"
+        ></li>
+
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="fas fa-circle nav-icon"></i>

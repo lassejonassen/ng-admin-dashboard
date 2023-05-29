@@ -1,0 +1,32 @@
+<ng-container>
+  <a
+    [attr.href]="item.url"
+    (click)="itemClick($event)"
+    *ngIf="!item.href || item.items"
+    [attr.target]="item.target"
+    [attr.tagindex]="0"
+  >
+    <i [ngClass]="item.icon"></i
+    ><span class="menuitem-text">{{ item.label }}</span></a
+  >
+  <a
+    (click)="itemClick($event)"
+    *ngIf="item.href && !item.items"
+    [routerLink]="item.href"
+    [attr.target]="item.target"
+    [attr.tabindex]="0"
+    ><i [ngClass]="item.icon"></i>
+    <span class="menuitem-text">{{ item.label }}</span></a
+  >
+  <ul *ngIf="item.items && active" [@children]>
+    <ng-template ngFor let-child let-i="index" [ngForOf]="item.items">
+      <li
+        app-menu-item
+        [item]="child"
+        [index]="i"
+        [parentKey]="key"
+        [class]="child.badgeClass"
+      ></li>
+    </ng-template>
+  </ul>
+</ng-container>

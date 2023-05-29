@@ -11,7 +11,15 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 
 @NgModule({
-  declarations: [AppComponent, ServerErrorComponent, NotFoundComponent, LoginComponent, ForgotPasswordComponent, RegisterComponent, ResetPasswordComponent],
+  declarations: [
+    AppComponent,
+    ServerErrorComponent,
+    NotFoundComponent,
+    LoginComponent,
+    ForgotPasswordComponent,
+    RegisterComponent,
+    ResetPasswordComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
