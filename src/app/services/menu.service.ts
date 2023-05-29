@@ -24,13 +24,19 @@ export class MenuService {
       {
         label: 'Dashboard',
         icon: 'fas fa-circle nav-icon',
-        href: '/',
+        href: '/dashboard',
+        visible: true,
+      },
+      {
+        label: 'Test 1',
+        icon: 'fas fa-circle nav-icon',
+        href: 'test',
         visible: true,
         items: [
           {
-            label: 'Test',
+            label: 'Test 2',
             icon: '',
-            href: '/',
+            href: '/test',
             visible: true,
           },
         ],

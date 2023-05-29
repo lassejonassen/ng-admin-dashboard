@@ -22,6 +22,8 @@ export class MainSidebarComponent implements OnInit, OnDestroy {
         this.model = menuModel;
       }
     );
+
+    console.log(this.model);
   }
 
   ngOnDestroy(): void {
