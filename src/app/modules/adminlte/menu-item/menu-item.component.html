@@ -8,8 +8,9 @@
     [attr.tagindex]="0"
   >
     <i [ngClass]="item.icon"></i
-    ><span class="menuitem-text">{{ item.label }}</span></a
-  >
+    ><span class="menuitem-text">{{ item.label }}</span
+    ><i class="right fas fa-angle-left"></i
+  ></a>
   <a
     class="nav-link"
     (click)="itemClick($event)"
@@ -20,7 +21,7 @@
     ><i [ngClass]="item.icon"></i>
     <span class="menuitem-text">{{ item.label }}</span></a
   >
-  <ul *ngIf="item.items && active">
+  <ul *ngIf="item.items && active" class="nav nav-treeview">
     <ng-template ngFor let-child let-i="index" [ngForOf]="item.items">
       <li
         app-menu-item

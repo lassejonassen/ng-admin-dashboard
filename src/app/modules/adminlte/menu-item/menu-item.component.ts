@@ -20,7 +20,6 @@ import { MainComponent } from '../../main/main.component';
 @Component({
   selector: '[app-menu-item]',
   templateUrl: './menu-item.component.html',
-  styleUrls: ['./menu-item.component.scss'],
 })
 export class MenuItemComponent implements OnInit, OnDestroy {
   @HostBinding('class.active-menuitem') 'active' = false;

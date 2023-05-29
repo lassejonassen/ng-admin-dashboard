@@ -6,7 +6,6 @@ import { MenuService } from 'src/app/services/menu.service';
 @Component({
   selector: 'app-main-sidebar',
   templateUrl: './main-sidebar.component.html',
-  styleUrls: ['./main-sidebar.component.scss'],
 })
 export class MainSidebarComponent implements OnInit, OnDestroy {
   model: MenuItem[];

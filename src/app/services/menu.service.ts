@@ -23,20 +23,20 @@ export class MenuService {
     const model: MenuItem[] = [
       {
         label: 'Dashboard',
-        icon: 'fas fa-circle nav-icon',
+        icon: 'fas fa-home nav-icon',
         href: '/dashboard',
         visible: true,
       },
       {
-        label: 'Test 1',
-        icon: 'fas fa-circle nav-icon',
-        href: 'test',
+        label: 'Union Management',
+        icon: 'fas fa-layer-group nav-icon',
+        href: 'union',
         visible: true,
         items: [
           {
-            label: 'Test 2',
-            icon: '',
-            href: '/test',
+            label: 'Unions',
+            icon: 'fas fa-object-group nav-icon',
+            href: '/unions',
             visible: true,
           },
         ],
