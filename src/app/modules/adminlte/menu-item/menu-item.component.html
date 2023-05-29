@@ -1,24 +1,28 @@
 <ng-container>
   <a
+    class="nav-link"
     [attr.href]="item.url"
     (click)="itemClick($event)"
-    *ngIf="!item.href || item.items"
+    *ngIf="item.href || !item.items"
     [attr.target]="item.target"
     [attr.tagindex]="0"
   >
     <i [ngClass]="item.icon"></i
-    ><span class="menuitem-text">{{ item.label }}</span></a
-  >
+    ><span class="menuitem-text">{{ item.label }}</span
+    ><i class="right fas fa-angle-left"></i
+  ></a>
   <a
+    class="nav-link"
     (click)="itemClick($event)"
     *ngIf="item.href && !item.items"
     [routerLink]="item.href"
     [attr.target]="item.target"
     [attr.tabindex]="0"
     ><i [ngClass]="item.icon"></i>
-    <span class="menuitem-text">{{ item.label }}</span></a
-  >
-  <ul *ngIf="item.items && active" [@children]>
+    <span class="menuitem-text">{{ item.label }}</span
+    ><i class="right fas fa-angle-down"></i
+  ></a>
+  <ul *ngIf="item.items && active">
     <ng-template ngFor let-child let-i="index" [ngForOf]="item.items">
       <li
         app-menu-item

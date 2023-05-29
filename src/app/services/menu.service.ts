@@ -23,7 +23,7 @@ export class MenuService {
     const model: MenuItem[] = [
       {
         label: 'Dashboard',
-        icon: '',
+        icon: 'fas fa-circle nav-icon',
         href: '/',
         visible: true,
         items: [
